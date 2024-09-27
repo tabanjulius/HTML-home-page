@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+html{
+    /* variables For storing Colors */
+    --primary-clr: #202020;
+    --primary-medium-clr: #d8e9df ;
+    --primaary-light-clr: #edfaf1;
+    --big-clr-1: #ffffff ;
+    --dark-heading-clr: #232d39;
+    --dark-text-clr: #6c757d;
+    --light-heading-clr: #efefef;
+    --light-text-clr: #cecece
+}
+/* ===Global styling starts ==*/
+button.btn{
+    padding: 10px 18px;
+    background-color: var(--primary-clr);
+    color: var(--light-heading-clr);
+    font-size: 15px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+button.btn:hover{
+    background-color: var(--light-heading-clr)
+   border: 1px solid var(var(--primary-clr))
+    
+}
+/* ===Global styling end ==*/
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+.website-container{
+    width: 100%;
+    max-height: 1400px;
+    min-height: 100vh;
+    margin: 0px auto;
+}
+/* === Home Section Styling Starts === */
+section .home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primaary-light-clr);
+}
+.home .main-navbar{
+    position: absolute;
+    width: 100%;
+    max-width: 1400px;
+    height: 12vh;
+    max-height: 80px;
+    background-color: rgb(0, 87, 0);
+    padding: 0px 8%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100px;
+}
+.main-navbar .logo{
+    text-decoration: none;
+}
+.main-navbar .logo img{
+    width: 50px;
+    height: auto;
+}
+.main-navbar .nav-list{
+    list-style: none;
+}
+.main-navbar .nav-list li{
+    display: inline-block;
+    margin: 0px 10px;
+
+}
+.main-navbar .nav-list li a{
+    position: relative;
+    color: var(--light-heading-clr);
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.main-navbar .nav-list li{
+    display: inline;
+    margin: 0px 10px;
+}
+.main-navbar .nav-list li a::after{
+position: absolute;
+content: ;
+width: 100%;
+height: 2px;
+background-color: var(--light-heading-clr);
+left: 0px;
+top: calc(100% + 2px);
+transition: all 0.3s;
+transform: scaleX(0);
+}
+.main-navbar .get-started-btn{
+    background-color: var(--light-heading-clr);
+    color: var(--primary-clr);
+}
+.main-navbar .get-started-btn:hover{
+    background-color: var(--primary-clr);
+    color: var(--light-heading-clr);
+    border: 1px solid var(--light-heading-clr);
+}
+.main-navbar .menu-btn{
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+.main-navbar .menu-btn span{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--light-heading-clr);
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+.main-navbar .menu-btn span::before,
+.main-navbar .menu-btn span::after{
+    position: absolute;
+    content: '' ;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: var(--light-heading-clr);
+    transition: all 0.4s;
+    border-radius
+}
+.main-navbar .menu-btn span::before{
+    transform: translatey(-9px);
+}
+.main-navbar .menu-btn span::after{
+    transform: translatey(9px);
+}
+.home .Banner{
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 8% 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home .Banner .banner-desc{
+    position: relative;
+    flex-basis: 50%;
+    max-width: 700px;
+    z-index: 2;
+}
+.Banner .banner-desc h2{
+    font-size: 48px;
+    color: var(--dark-heading-clr);
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    
+}
+.Banner .banner-desc p{
+    color: var(--dark-text-clr);
+    line-height: 1.4;
+    margin-bottom: 50px;
+
+}
+.Banner .banner-desc .search-bar{
+  position: relative;
+  width: 400px;
+  height: 50px; 
+  display: flex;
+  align-items: center;
+  overflow: hidden; 
+}
+.banner-desc .search-bar input{
+    width: 100%;
+    height: 100%;
+    padding: 0px 60px 0px 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    background-color: var(--primaary-light-clr);
+    color: var(--dark-text-clr);
+    border: 2px solid #c1dbcc;
+    border-radius: 5px;
+    outline-color: var(--primary-clr);
+}
+.banner-desc .search-bar i{
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    background-color: var(--primary-clr);
+    right: 0;
+    color: var(--light-heading-clr);
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.home .Banner .banner-img{
+    position: relative;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+.banner-img .banner-img-container{
+    position: relative;
+    width: 400px;
+    z-index: 2;
+
+}
+.banner-img .banner-img-container img{
+    width: 100%;
+    height: auto;
+}
+.banner-img .banner-img-container .states {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.banner-img .banner-img-container .states .total-courses{
+    position: absolute;
+    padding: 6px 10px 6px 6px;
+    background-color: var(--light-heading-clr);
+    border-radius: 5px;
+    bottom: 15%;
+    left: -80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+}
+.states .total-courses .icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-clr);
+    margin-right: 7px;
+}
+.states .total-courses .icon i{
+    font-size: 22px;
+    color: var(--light-heading-clr);
+
+}
+.states .total-courses .desc{
+    display: flex;
+    flex-direction: column;
+
+}
+.states .total-courses .desc span:nth-last-child(1){
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+.states .total-courses .desc span:nth-last-child(2){
+    font-size: 15px;
+    color: var(--dark-text-clr);
+}
+.banner-img-container .states .Courses-ratings{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--light-heading-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    right: 5px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+}
+.states .Courses-ratings span:nth-child(1){
+ color:var(--dark-heading-clr) ;
+ font-size: 14px;
+ font-weight: 600;
+ text-align: center;
+
+}
+.states .Courses-ratings span:nth-child(1) i{
+    color: gold;
+    font-size: 14px;
+}
+.states .Courses-ratings span:nth-child(2){
+    color: var(--dark-text-clr);
+    font-size: 15px;
+    text-align: center;
+}
+.banner-img .banner-img-container .pattern{
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    z-index: -1;
+}
+.banner-img-container .pattern img{
+    width: 150px;
+    height: auto;
+    opacity: 0.4;
+}
+/* === Home Section Styling Ends === */
+
+
+/* ===media Query starts ==*/
+@media(max-width: 968px){
+    /* Home Section */
+    .main-navbar .menu-btn{
+        display: flex;
+        margin-left: 40px;
+        z-index: 101;
+    }
+    .main-navbar .menu-btn.active span,
+    .main-navbar .menu-btn.active span::before,
+    .main-navbar .menu-btn.active span::after{
+        width: 100%;
+    }
+    .main-navbar .menu-btn.active span::before{
+        transform: rotate(45deg) translateY(0px);
+    }
+    .main-navbar .menu-btn.active span::after{
+        transform: rotate(-45deg) translateY(0px);}
+        .main-navbar .menu-btn.active span{
+            background-color: transparent;
+        }
+    .main-navbar .nav-list{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        /*right: 0;*/
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-clr);
+        transition: right 0.3s cubic-bezier(.15, .61, .94, .25);
+        z-index: 100;
+    }
+    .main-navbar .nav-list .active{
+        right: 0;
+    }
+    .main-navbar .nav-list li{
+        margin: 25px 0px 0px;
+    }
+    .main-navbar .nav-list li:nth-child(1){
+        margin-top: 180px;
+    }
+    .main-navbar .nav-list li a{
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .main-navbar .get-started-btn-container{
+        margin-left: auto;
+
+    }
+    .home .Banner{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+    .home .Banner .banner-desc,
+    .home .Banner .banner-img{
+        flex-basis: 100%;
+    }
+    .home .Banner .banner-img{
+        align-self: center;
+        margin-bottom: 50px;
+    }
+}
+@media(max-width: 768px){
+    .banner-img .banner-img-container .states .total-courses{
+        left: 5px;
+        bottom: 10%;
+    }
+    .Banner .banner-desc h2{
+        font-size: 32px;
+    }
+}
+@media(max-width: 668px){}
+@media(max-width: 568px){}
+@media(max-width: 468px){
+    .banner-img .banner-img-container{
+        width: 100%;
+    }
+    .Banner .banner-desc .search-bar{
+        width: 100%;
+    }
+    .banner-img-container .states .Courses-ratings{
+        top: 30px;
+        right: -10px;
+    }
+    .Banner .banner-desc h2{
+        font-size: 32px;
+    }
+    .main-navbar .get-started-btn-container{
+        display: none;
+    }
+}
+/* ===media Query End ==*/
+
+/*  === Courses section styling starts ===  */
+section .course{
+    width: 100%;
+    padding: 100px 8% 20px;ss
+}
+
+.course .section-header{
+    display: flex;
+    displ
+}
+
+.course .section-header .courses-btn-btn{
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    padding: 10px 26px;
+}
+/*=== Courses section styling Ends === */
+
+
+
+.block.block_html.topics .block-content a img {
+    max-width: 125px;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #413e28;
+    border-bottom-width: 3px;
+    margin: 0 0 2vh;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+ck.block_html.hero .block-content .row {
+    display: -webkit-box;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+    margin: 0;
+}
